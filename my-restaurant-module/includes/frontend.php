@@ -29,15 +29,17 @@ function initMap() {
                 map: map
             });
             <?php
+            
+
             $current_address = htmlspecialchars($settings->item_locations[$i]->address_location, ENT_QUOTES);
-            $current_info = htmlspecialchars($settings->item_locations[$i]->infowindow_location, ENT_QUOTES);
+            $current_info = str_replace("\n","</br>",str_replace("'"," ",str_replace("\""," ",$settings->item_locations[$i]->infowindow_location)));
             $contentString = "<h3>".$current_address."</h3>";
             $contentString .= "<p>".$current_info."</p>";
             ?>
             infowindow = new google.maps.InfoWindow();
             google.maps.event.addListener(marker, 'click', (function(marker, j) {
                 return function() {
-                    infowindow.setContent('<?=$contentString ?>');
+                    infowindow.setContent("<?=$contentString ?>");
                     infowindow.open(map, marker);
                 }
 			})(marker, j));

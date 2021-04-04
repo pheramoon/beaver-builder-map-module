@@ -4,6 +4,14 @@
   font-weight: <?php echo $settings->my_font_field['weight']; ?>;
 }
 
+.fl-node-<?php echo $id; ?> #map {
+  height: 600px;
+}
+.fl-node-<?php echo $id; ?> .my-hr {
+  margin:15px;
+  border-width: 4px;
+}
+
 <?php
 
 /**

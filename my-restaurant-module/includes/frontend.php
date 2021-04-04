@@ -13,8 +13,8 @@ function initMap() {
     let j=0;
     var infowindow;
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 42.30418434856217, lng: -83.02863931221528 }, //Windsor Ontario
-        zoom: 14,
+        center: new google.maps.LatLng(<?php echo $settings->my_map_center_lat_lng; ?>),
+        zoom: <?php echo $settings->my_map_zoom; ?>
     });
 
     <?php
@@ -51,6 +51,6 @@ function initMap() {
 }
 </script>
 
-<hr>
-<br>
+<hr class="my-hr">
+
 <div id="map"></div>

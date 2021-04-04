@@ -40,12 +40,12 @@ FLBuilder::register_module( 'MyModuleClass', array(
           'my_api_key_field'     => array(
             'type'          => 'text',
             'label'         => __( 'API KEY', 'fl-builder' ),
-            'help'          => 'Please enable both Javascript API and Geocode API for google map'
+            'help'          => 'Please enable both Javascript API and Geocoding API for google map'
           ),
         )
       ),
       'my-map-heading'  => array(
-        'title'         => __( 'Map Heading', 'fl-builder' ),
+        'title'         => __( 'Map Setting', 'fl-builder' ),
         'fields'        => array(
           'my_map_heading_field'     => array(
             'type'          => 'text',
@@ -55,7 +55,23 @@ FLBuilder::register_module( 'MyModuleClass', array(
               'selector'         => '.fl-my-heading',
               'property'         => 'font-size',
               'unit'             => 'px'
-          )
+            )
+          ),
+          'my_map_center_lat_lng'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Map Center', 'fl-builder' ),
+            'help'          => 'Please enter lat, lng',
+            'default'       => '42.31, -83.03'
+          ),
+          'my_map_zoom' => array(
+            'type'          => 'select',
+            'label'         => __( 'Map Zoom', 'fl-builder' ),
+            'default'       => '14',
+            'options'       => array(
+              '14'      => __( '14', 'fl-builder' ),
+              '12'      => __( '12', 'fl-builder' ),
+              '10'      => __( '10', 'fl-builder' )
+            ),
           ),
           'my_font_field' => array(
             'type'          => 'font',
@@ -82,7 +98,7 @@ FLBuilder::register_module( 'MyModuleClass', array(
                 'selector'   => '.fl-my-heading',
                 'property'   => 'text-align',
             ),
-        ),
+          ),
         )
       )
     )
@@ -121,6 +137,8 @@ FLBuilder::register_settings_form('location_items_form', array(
 						'address_location' => array(
 							'type'        => 'text',
 							'label'       => __( 'Address', 'fl-builder' ),
+              'help'        => 'Enter the full address, zip code or name of restaurant',
+              'placeholder' => 'Example: Pho Maxim Windsor',
 							'connections' => array( 'string' ),
 						),
 					),

@@ -17,4 +17,5 @@ function my_load_module_examples() {
   }
 }
 add_action( 'init', 'my_load_module_examples' );
+add_filter( 'fl_builder_should_refresh_on_publish', '__return_true' );
 ?>

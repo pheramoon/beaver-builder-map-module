@@ -3,7 +3,7 @@
  * Plugin Name: Custom Restaurant Location
  * Plugin URI: http://beaver.local
  * Description: Custom modules for the Beaver Builder Plugin.
- * Version: 1.0
+ * Version: 1.3
  * Author: Mehdi Mousavi
  * Author URI: https://www.linkedin.com/in/mr-mazhari/
  */

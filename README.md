@@ -10,7 +10,7 @@ Version #1.0:
 Initial stage of project
 
 Version #1.1:
-Test and some bugs
+Test and fix some bugs
 
 Version #1.2:
 Minor bug fixes about fields special character

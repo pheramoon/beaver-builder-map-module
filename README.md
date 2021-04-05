@@ -13,7 +13,9 @@ Version #1.1:
 Test and fix some bugs
 
 Version #1.2:
-Minor bug fixes about fields special character
+Minor bug fixes (fields special characters)
 
 Version #1.3:
-Add map center and zoom feature
+Map center and zoom feature
+
+Enjoy!

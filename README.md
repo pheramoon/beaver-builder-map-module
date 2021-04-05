@@ -2,6 +2,8 @@
 Custom map module for beaver builder
 by Mehdi Mousavi
 
+Note: please make sure that to have Geocoding API & JavaScript Map API for google maps.
+
 Changelog:
 
 Version 1.0
